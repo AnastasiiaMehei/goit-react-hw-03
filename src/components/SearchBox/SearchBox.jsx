@@ -1,5 +1,14 @@
-export default function SearchBox(){
+export default function SearchBox({value, onFilter}){
     return(
-        <h1></h1>
-    )
+<div>
+    <p>
+        Find contacts by name
+    </p>
+    <input type="text"
+    value={value} 
+    onChange={((e)=>onFilter(e.target.value))}/>
+</div>
+
+
+        )
 }

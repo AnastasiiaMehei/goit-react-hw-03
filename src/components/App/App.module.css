@@ -3,6 +3,7 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  text-decoration: none;
 }
 
 .logo {
@@ -42,4 +43,12 @@
 }
 .div {
   margin-left: 20px;
+}
+
+li {
+  text-decoration: none;
+}
+ul,
+ol {
+  list-style-type: none;
 }

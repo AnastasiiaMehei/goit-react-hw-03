@@ -1,0 +1,10 @@
+.li {
+  margin-right: 8px;
+}
+.ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 0;
+}
