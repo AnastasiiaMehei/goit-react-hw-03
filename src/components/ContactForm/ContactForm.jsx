@@ -3,30 +3,24 @@ import * as Yup from "yup";
 import { Formik, Form, Field, ErrorMessage} from 'formik';
 import css from './ContactForm.module.css'
 export default function ContactForm(onAdd){
-    const FeedbackSchema = Yup.object().shape({
+    const validationSchema = Yup.object().shape({
         name: Yup.string().min(3, "Too Short!").max(50, "Too Long!").required("Required"),
         number: Yup.string().min(3, "Too Short!").max(50, "Too Long!").required("Required"),
-
     });  
-    const initialValues={
-        name: "",
-        number: ""
-      }
       const dataId = useId();
-
-      const handleSubmit = (values) => {
+      const handleSubmit = (e) => {
+         e.preventDefault();
         onAdd({
             id: dataId,
-            name: values.name,
-            number: values.number,
+            name: e.target.elements.name.value,           
         });
-    };       
-    
+        e.target.reset();
+    };        
     return(
         <Formik
-    initialValues={initialValues}
+    initialValues={{name:"", number:""}}
     onSubmit={handleSubmit}
-    validationSchema={FeedbackSchema}>
+    validationSchema={validationSchema}>
     <Form className={css.form}>
         <div className={css.div}>
             <label htmlFor={`${dataId}-name`}>Name</label>
