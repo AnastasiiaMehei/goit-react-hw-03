@@ -18,7 +18,7 @@ export default function App() {
     });
   };
   const visibleData = data?.filter((item) =>
-    item.text?.toLowerCase().includes(filter.toLowerCase())
+    item.name.toLowerCase().includes(filter.toLowerCase())
   );
   
   return (
