@@ -16,7 +16,6 @@ export default function ContactForm(){
       const numberFieldId = useId();
 
         const handleSubmit = (values, actions) => {
-              console.log(values);
               actions.resetForm();
           };
 
@@ -29,13 +28,14 @@ export default function ContactForm(){
         validationSchema={FeedbackSchema}>
         <Form className={css.form}>
         
-        <label htmlFor={nameFieldId}>Name</label>
+        <div className={css.div}><label htmlFor={nameFieldId}>Name</label>
         
         <Field className={css.field} type="text" name="name" id={nameFieldId} />
         <ErrorMessage className={css.span} name="name" component="span" />
-        <label htmlFor={numberFieldId}>Phone</label>
+        </div>
+        <div className={css.div}><label htmlFor={numberFieldId}>Phone</label>
         <Field className={css.field} type="number" name="number" id={numberFieldId} />
-        <ErrorMessage className={css.span} name="number" component="span" />
+        <ErrorMessage className={css.span} name="number" component="span" /></div>
             <button className={css.btn} type="submit">Add contact</button>
 			</Form>
       </Formik>

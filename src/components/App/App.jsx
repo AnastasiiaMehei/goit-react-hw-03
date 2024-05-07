@@ -17,9 +17,10 @@ export default function App() {
       return prevData.filter((data) => data.id !== dataId);
     });
   };
-  const visibleData = data.filter((item) => {
-    return item && item.text && item.text.toLowerCase().includes(filter.toLowerCase());
-});
+  const visibleData = data?.filter((item) =>
+    item.text?.toLowerCase().includes(filter.toLowerCase())
+  );
+  
   return (
     <div className={css.div}>
   <h1>Phonebook</h1>
