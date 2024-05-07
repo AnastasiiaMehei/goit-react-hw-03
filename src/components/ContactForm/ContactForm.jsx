@@ -20,10 +20,7 @@ export default function ContactForm(onAdd){
             name: values.name,
             number: values.number,
         });
-    };    
-    
-    console.log(values);
-    
+    };       
     
     return(
         <Formik
