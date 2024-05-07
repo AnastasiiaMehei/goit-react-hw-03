@@ -1,0 +1,10 @@
+.button {
+  border: 1px solid grey;
+  border-radius: 2px;
+  color: grey;
+  font-weight: 300;
+  margin-right: 10px;
+}
+.div {
+  margin-left: 20px;
+}
