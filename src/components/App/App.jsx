@@ -2,7 +2,7 @@ import css from './App.module.css'
 import ContactForm from '../ContactForm/ContactForm'
 import SearchBox from '../SearchBox/SearchBox'
 import ContactList from '../ContactList/ContactList'
-import initialData from '../../data/datas.json'
+import initialData from '../../data/data.json'
 import { useState } from 'react';
 export default function App() {
   const [data, setData] = useState(initialData);
