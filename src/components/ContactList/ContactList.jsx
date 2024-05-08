@@ -6,7 +6,7 @@ export default function ContactList({ data, onDelete }) {
         {data.map((contact, index) => {
     return (
         <li className={css.li} key={`${contact.id}-${index}`}> 
-            <Contact id={`${contact.id}-${index}`} name={contact.name} number={contact.number} onDelete={onDelete}/> 
+            <Contact id={contact.id} name={contact.name} number={contact.number} onDelete={onDelete}/> 
         </li>
     );
 })}
