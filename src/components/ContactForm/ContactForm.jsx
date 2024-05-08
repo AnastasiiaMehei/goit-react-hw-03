@@ -1,4 +1,4 @@
-import { useId } from "react"; // Assuming this is a custom hook you've defined elsewhere
+import { useId } from "react"; 
 import * as Yup from "yup";
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import css from './ContactForm.module.css';
@@ -9,8 +9,7 @@ export default function ContactForm({ onAdd }) {
         number: Yup.string().min(3, "Too Short").max(50, "Too Long").required("Required"),
     });
 
-    // Correctly use the useId hook
-    const dataId = useId(); // Ensure this hook returns a string
+    const dataId = useId(); 
 
     return (
         <Formik
