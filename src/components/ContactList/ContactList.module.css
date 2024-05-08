@@ -1,15 +1,22 @@
-.li {
-  margin-right: 8px;
-  width: calc((100% - 8px) / 4);
-}
-.ul {
+.container {
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
-  gap: 8px;
+  justify-content: space-between;
+}
+
+.itemContainer {
+  display: flex;
+  flex-direction: column;
+  width: calc(25% - 10px);
+  margin-bottom: 20px;
+}
+
+.ul {
+  list-style-type: none;
   padding: 0;
-  padding-left: 0;
-  margin-top: 20px;
-  margin-bottom: 0;
-  width: max-content;
+}
+
+.li {
+  padding: 10px;
+  box-sizing: border-box;
 }

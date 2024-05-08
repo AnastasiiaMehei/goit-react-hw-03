@@ -13,11 +13,11 @@ export default function App() {
     });
   };
   const deleteData = (dataId) => {
+
     setData((prevData) => {
       return prevData.filter((data) => data.id !== dataId);
     });
   };
-
   const visibleData = data.filter((item) =>
     item.name.toLowerCase().includes(filter.toLowerCase())
   );
