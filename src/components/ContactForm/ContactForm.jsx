@@ -24,13 +24,13 @@ export default function ContactForm({ onAdd }) {
             {({ handleSubmit }) => (
                 <Form className={css.form} onSubmit={handleSubmit}>
                     <div className={css.div}>
-                        <label htmlFor={`${dataId}-name`}>Name</label>
-                        <Field className={css.field} type="text" name="name" id={`${dataId}-name`} />
+                        <label htmlFor={dataId}>Name</label>
+                        <Field className={css.field} type="text" name="name" id={dataId} />
                         <ErrorMessage className={css.span} name="name" component="span" />
                     </div>
                     <div className={css.div}>
-                        <label htmlFor={`${dataId}-phone`}>Phone</label>
-                        <Field className={css.field} type="number" name="number" id={`${dataId}-phone`} />
+                        <label htmlFor={dataId}>Phone</label>
+                        <Field className={css.field} type="number" name="number" id={dataId} />
                         <ErrorMessage className={css.span} name="number" component="span" />
                     </div>
                     <button className={css.btn} type="submit">Add contact</button>
