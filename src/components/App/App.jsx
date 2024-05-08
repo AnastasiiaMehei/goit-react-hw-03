@@ -2,7 +2,7 @@ import css from './App.module.css'
 import ContactForm from '../ContactForm/ContactForm'
 import SearchBox from '../SearchBox/SearchBox'
 import ContactList from '../ContactList/ContactList'
-import initialData from '../../data/data.json'
+import initialData from '../../data/datas.json'
 import { useState } from 'react';
 export default function App() {
   const [data, setData] = useState(initialData);
@@ -17,7 +17,8 @@ export default function App() {
       return prevData.filter((data) => data.id !== dataId);
     });
   };
-  const visibleData = data?.filter((item) =>
+
+  const visibleData = data.filter((item) =>
     item.name.toLowerCase().includes(filter.toLowerCase())
   );
   
