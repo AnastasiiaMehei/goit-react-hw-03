@@ -18,6 +18,16 @@
   border: 1px solid black;
   width: 129px;
   margin-top: 15px;
+  background-color: #8a8ab7;
+  border-color: chartreuse;
+}
+.btn:focus {
+  border: 1px solid rgb(189, 189, 26);
+  background-color: #2626cb;
+}
+.btn:hover {
+  border: 1px solid rgb(189, 189, 26);
+  background-color: #2626cb;
 }
 .span {
   color: red;
